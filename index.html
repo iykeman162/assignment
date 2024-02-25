@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      <label for="fname">First Name:</label>
+      <input type="text" id="firstName" placeholder="First name" required />
+      <br />
+
+      <br />
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lastName" placeholder="Last name" required />
+      <br />
+      <br />
+      <button type="submit" id="btn">Submit</button> :
+    </form>
+
+    <div id="fullName"></div>
+
+    <script>
+      const form = document.getElementById("form");
+      const fName = document.getElementById("firstName");
+      const lName = document.getElementById("lastName");
+      const completeName = document.getElementById("fullName");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const fullName = fName.value + " " + lName.value;
+        completeName.innerText = fullName;
+      });
+    </script>
+  </body>
+</html>
