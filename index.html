@@ -30,7 +30,9 @@
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         const fullName = fName.value + " " + lName.value;
-        completeName.innerText = fullName;
+        completeName.innerText =`Welcome!${fullName} ` ;
+        const clearFname = fName.value = "";
+        const clearLname = lName.value = "";
       });
     </script>
   </body>
